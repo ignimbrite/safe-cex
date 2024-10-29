@@ -7,6 +7,7 @@ import { GateExchange } from './exchanges/gate/gate.exchange';
 import { OKXExchange } from './exchanges/okx/okx.exchange';
 import { PhemexExchange } from './exchanges/phemex/phemex.exchange';
 import { WOOXExchange } from './exchanges/woo/woo.exchange';
+import {KrakenExchange} from "./exchanges/kraken/kraken.exchange";
 import { DefaultStore } from './store/store.base';
 import type { Store } from './store/store.interface';
 import type { ExchangeName, ExchangeOptions } from './types';
@@ -21,6 +22,7 @@ const exchanges: Record<ExchangeName, typeof BaseExchange> = {
   bitget: BitgetExchange,
   blofin: BlofinExchange,
   phemex: PhemexExchange,
+  kraken: KrakenExchange
 };
 
 export const createExchange = (

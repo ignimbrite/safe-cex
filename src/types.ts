@@ -6,7 +6,8 @@ export type ExchangeName =
   | 'gate'
   | 'okx'
   | 'phemex'
-  | 'woo';
+  | 'woo'
+  | 'kraken';
 
 export type ExtraExchangeOptions = {
   [key in ExchangeName]?: {
